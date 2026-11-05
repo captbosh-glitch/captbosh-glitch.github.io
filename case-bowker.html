@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The ISBN store, and the search behind it · Pat David</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="css/case.css">
+<script>
+(function(){var r=document.documentElement,k='pd-theme';
+try{var t=localStorage.getItem(k);if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}
+function dark(){var t=r.getAttribute('data-theme');return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;}
+function sync(){var b=document.getElementById('themeBtn');if(b)b.setAttribute('aria-label',dark()?'Switch to light mode':'Switch to dark mode');}
+document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest('#themeBtn'))return;
+  var t=dark()?'light':'dark';r.setAttribute('data-theme',t);try{localStorage.setItem(k,t);}catch(e){}sync();});
+document.addEventListener('DOMContentLoaded',sync);sync();})();
+</script>
+</head>
+<body>
+<header><div class="wrap"><a class="mark" href="index.html">Pat David</a><a class="back" href="index.html#bowker">← All work</a><button class="theme" id="themeBtn" type="button" aria-label="Switch theme"><svg class="moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div></header>
+<main>
+<div class="top"><div class="wrap head">
+  <div><div class="label">Bowker · Senior User Experience Designer · 2007–2014</div><h1>The ISBN store, and the search behind it</h1><p>Bowker is the official ISBN agency for the US. I designed the store where independent authors buy ISBNs and register their books, and Bookwire, the book search librarians use.</p></div>
+  <dl class="spec"><dt>Role</dt><dd>Senior UX Designer; Drupal theme developer</dd><dt>Team</dt><dd>Product, engineering, test engineering, marketing</dd><dt>Methods</dt><dd>Librarian research, A/B testing with Google Content Experiments</dd><dt>Platforms</dt><dd>Web, mobile app, print campaigns</dd></dl>
+</div></div>
+<div class="wrap">
+  <nav class="toc" aria-label="Projects in this case"><a href="#identifier">01 · Identifier Services</a><a href="#bookwire">02 · Bookwire</a></nav>
+  <section class="part" id="identifier">
+    <div class="part-head"><div><span class="n">01</span><h2>Identifier Services</h2></div><p>An eCommerce store for first-time authors</p></div>
+    <div class="story">
+      <div><h3>The problem</h3><p>Independent authors needed one place to buy ISBNs, register their book details and learn how to self-publish. The business depended on that store converting.</p></div>
+      <div><h3>What I did</h3><p>I was the UX designer and Drupal theme developer on an eight-person team. I designed the purchase flow around retail best practices, ran A/B tests that routed traffic to the best-performing layouts, and designed product pages that cross-sold related services. I also worked with marketing to carry the design into mobile and print campaigns.</p></div>
+      <div class="result"><h3>What changed</h3><p>The winning layouts scaled automatically, and cross-selling on product pages raised average order value.</p></div>
+    </div>
+    <div class="gal"><figure class="s6"><button type="button" aria-label="Enlarge: Identifier Services home page on a desktop monitor"><img src="img/cases/bw-01.webp" alt="Identifier Services home page on a desktop monitor" loading="lazy"></button><figcaption>Home</figcaption></figure><figure class="s6"><button type="button" aria-label="Enlarge: Identifier Services print brochure spread"><img src="img/cases/bw-05.webp" alt="Identifier Services print brochure spread" loading="lazy"></button><figcaption>Print campaign</figcaption></figure><figure class="s4"><button type="button" aria-label="Enlarge: Storefront home page with ISBN packages"><img src="img/cases/bw-02.webp" alt="Storefront home page with ISBN packages" loading="lazy"></button><figcaption>Store</figcaption></figure><figure class="s4"><button type="button" aria-label="Enlarge: ISBN product page with related services"><img src="img/cases/bw-04.webp" alt="ISBN product page with related services" loading="lazy"></button><figcaption>Product page with cross-sell</figcaption></figure><figure class="s4"><button type="button" aria-label="Enlarge: Bowker enrichment ad for libraries"><img src="img/cases/bw-09.webp" alt="Bowker enrichment ad for libraries" loading="lazy"></button><figcaption>Library ad</figcaption></figure></div>
+  </section>
+  <section class="part" id="bookwire">
+    <div class="part-head"><div><span class="n">02</span><h2>Bookwire</h2></div><p>Book search for beginners and librarians alike</p></div>
+    <div class="story">
+      <div><h3>The problem</h3><p>Bookwire&rsquo;s bibliographic database served everyone from casual readers to experienced librarians. It had to be simple for both.</p></div>
+      <div><h3>What I did</h3><p>I was the product designer on a four-person team. Research with librarians shaped a simple search with advanced filters, plus a companion app for looking things up in the stacks. I worked closely with engineering to keep the scope realistic, and mapped the experience across device sizes.</p></div>
+      <div class="result"><h3>What changed</h3><p>One search that works for a beginner, with the depth a librarian needs, on desktop or in the aisles.</p></div>
+    </div>
+    <div class="gal"><figure class="s6"><button type="button" aria-label="Enlarge: Bookwire on phone, tablet and laptop"><img src="img/cases/bw-11.webp" alt="Bookwire on phone, tablet and laptop" loading="lazy"></button><figcaption>Across devices</figcaption></figure><figure class="s6"><button type="button" aria-label="Enlarge: Bookwire home page with featured books"><img src="img/cases/bw-12.webp" alt="Bookwire home page with featured books" loading="lazy"></button><figcaption>Home</figcaption></figure><figure class="s4"><button type="button" aria-label="Enlarge: Bookwire app welcome screen"><img src="img/cases/bw-15.webp" alt="Bookwire app welcome screen" loading="lazy"></button><figcaption>App · welcome</figcaption></figure><figure class="s4"><button type="button" aria-label="Enlarge: Bookwire app search results"><img src="img/cases/bw-16.webp" alt="Bookwire app search results" loading="lazy"></button><figcaption>App · results</figcaption></figure><figure class="s4"><button type="button" aria-label="Enlarge: Bookwire app book detail"><img src="img/cases/bw-17.webp" alt="Bookwire app book detail" loading="lazy"></button><figcaption>App · book detail</figcaption></figure></div>
+  </section>
+</div>
+</main>
+<nav class="next" aria-label="Next project"><div class="wrap">
+  <a class="go" href="case-physicians.html"><div class="label">Next</div><h2>Physician&rsquo;s Dashboard →</h2></a>
+  <a class="btn" href="index.html#work">All case studies</a>
+</div></nav>
+<dialog id="lb" aria-label="Enlarged image"><button type="button" id="lbClose">Close ✕</button><img id="lbImg" alt=""><p id="lbCap"></p></dialog>
+<script>
+var lb=document.getElementById('lb'),li=document.getElementById('lbImg'),lc=document.getElementById('lbCap');
+document.querySelectorAll('.gal button').forEach(function(b){b.addEventListener('click',function(){
+  var i=b.querySelector('img');li.src=i.src;li.alt=i.alt;lc.textContent=i.alt;
+  if(lb.showModal)lb.showModal();else window.open(i.src,'_blank','noopener');});});
+document.getElementById('lbClose').addEventListener('click',function(){lb.close();});
+lb.addEventListener('click',function(e){if(e.target===lb)lb.close();});
+</script>
+</body>
+</html>

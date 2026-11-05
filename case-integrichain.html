@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pharma data tools people can run themselves · Pat David</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="css/case.css">
+<script>
+(function(){var r=document.documentElement,k='pd-theme';
+try{var t=localStorage.getItem(k);if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}
+function dark(){var t=r.getAttribute('data-theme');return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;}
+function sync(){var b=document.getElementById('themeBtn');if(b)b.setAttribute('aria-label',dark()?'Switch to light mode':'Switch to dark mode');}
+document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest('#themeBtn'))return;
+  var t=dark()?'light':'dark';r.setAttribute('data-theme',t);try{localStorage.setItem(k,t);}catch(e){}sync();});
+document.addEventListener('DOMContentLoaded',sync);sync();})();
+</script>
+</head>
+<body>
+<header><div class="wrap"><a class="mark" href="index.html">Pat David</a><a class="back" href="index.html#integrichain">← All work</a><button class="theme" id="themeBtn" type="button" aria-label="Switch theme"><svg class="moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div></header>
+<main>
+<div class="top"><div class="wrap head">
+  <div><div class="label">IntegriChain · Lead User Experience Designer · 2014–2020</div><h1>Pharma data tools people can run themselves</h1><p>Drug makers use IntegriChain to see how their products move through pharmacies and distributors. I designed the dashboards and internal tools behind that data, and the brand work around them.</p></div>
+  <dl class="spec"><dt>Role</dt><dd>Lead UX Designer</dd><dt>Users</dt><dd>Pharmacy professionals, commercial analysts, internal data teams</dd><dt>Tools</dt><dd>Balsamiq, Sketch, Spotfire, Adobe CC</dd><dt>Work</dt><dd>Dashboards, internal tools, research, event and social graphics</dd></dl>
+</div></div>
+<div class="wrap">
+  <nav class="toc" aria-label="Projects in this case"><a href="#dashboard">01 · Pharmacy Dashboard</a><a href="#ecs">02 · ECS Optimizer Tool</a><a href="#journey">03 · Inventory Analytics journey map</a><a href="#brand">04 · Trade-show and brand graphics</a></nav>
+  <section class="part" id="dashboard">
+    <div class="part-head"><div><span class="n">01</span><h2>Pharmacy Dashboard</h2></div><p>One dashboard that each role arranges for itself</p></div>
+    <div class="story">
+      <div><h3>The problem</h3><p>People in different pharmacy roles need to read the same data in different ways. A single fixed dashboard served nobody well.</p></div>
+      <div><h3>What I did</h3><p>I designed a dashboard people manage themselves: choose charts from a palette, arrange them, and remove what they don&rsquo;t need, on any device. Rounds of Balsamiq wireframes worked out the mechanics; responsive designs in Sketch went to product stakeholders, then engineering.</p></div>
+      <div class="result"><h3>What changed</h3><p>A flexible framework instead of one-size-fits-all reporting: each role sees its own view of the data.</p></div>
+    </div>
+    <div class="gal"><figure class="s4"><button type="button" aria-label="Enlarge: Dashboard on a tablet with onboarding tips"><img src="img/cases/ic-01.webp" alt="Dashboard on a tablet with onboarding tips" loading="lazy"></button><figcaption>First run · guidance</figcaption></figure><figure class="s4"><button type="button" aria-label="Enlarge: Chart palette open for adding visualizations"><img src="img/cases/ic-03.webp" alt="Chart palette open for adding visualizations" loading="lazy"></button><figcaption>Add from the chart palette</figcaption></figure><figure class="s4"><button type="button" aria-label="Enlarge: Customized dashboard with area and pie charts"><img src="img/cases/ic-05.webp" alt="Customized dashboard with area and pie charts" loading="lazy"></button><figcaption>A customized view</figcaption></figure></div>
+  </section>
+  <section class="part" id="ecs">
+    <div class="part-head"><div><span class="n">02</span><h2>ECS Optimizer Tool</h2></div><p>A multi-step database workflow, on one screen</p></div>
+    <div class="story">
+      <div><h3>The problem</h3><p>Optimizing Enriched Channel Sales data meant editing MySQL records, publishing, then reloading Spotfire templates just to check the result. It was slow and error-prone, and new hires took weeks or months to learn it.</p></div>
+      <div><h3>What I did</h3><p>I put the whole workflow on one screen that hides the database work and lets people publish and reload data instantly. After rounds of wireframes and interactive concepts, it was built on a responsive framework with JavaScript and direct Spotfire integration.</p></div>
+      <div class="result"><h3>What changed</h3><p>Analysts could optimize and check data in one place, without touching the database, which made the job far easier to learn.</p></div>
+    </div>
+    <div class="gal"><figure class="s6"><button type="button" aria-label="Enlarge: Wireframe of the optimizer with manufacturer picker"><img src="img/cases/ic-07.webp" alt="Wireframe of the optimizer with manufacturer picker" loading="lazy"></button><figcaption>Wireframe</figcaption></figure><figure class="s6"><button type="button" aria-label="Enlarge: Optimizer with scatter plot and package table"><img src="img/cases/ic-08.webp" alt="Optimizer with scatter plot and package table" loading="lazy"></button><figcaption>Final design</figcaption></figure></div>
+  </section>
+  <section class="part" id="journey">
+    <div class="part-head"><div><span class="n">03</span><h2>Inventory Analytics journey map</h2></div><p>Finding the friction before fixing it</p></div>
+    <div class="story">
+      <div><h3>The problem</h3><p>The inventory analytics process had friction, but nobody had mapped it end to end.</p></div>
+      <div><h3>What I did</h3><p>I interviewed team members from beginners to experts, turned their workflows into personas, and built a journey map of each phase: the tasks, the pain points and the moods.</p></div>
+      <div class="result"><h3>What changed</h3><p>Stakeholders got a clear picture of where to fix the process first.</p></div>
+    </div>
+    <div class="gal"><figure class="s12"><button type="button" aria-label="Enlarge: Journey map for two personas across five phases"><img src="img/cases/ic-09.webp" alt="Journey map for two personas across five phases" loading="lazy"></button><figcaption>Journey map · two personas, five phases</figcaption></figure></div>
+  </section>
+  <section class="part" id="brand">
+    <div class="part-head"><div><span class="n">04</span><h2>Trade-show and brand graphics</h2></div><p>Messages that work in a few seconds, across a crowded hall</p></div>
+    <div class="story">
+      <div><h3>The problem</h3><p>At a trade show, tables and people block the bottom of every banner, and attendees give a booth a few seconds.</p></div>
+      <div><h3>What I did</h3><p>I kept each message short, placed it high on the canvas, and used bold, high-contrast art. I built the art in Illustrator and laid it out in InDesign for print.</p></div>
+      <div class="result"><h3>What changed</h3><p>A consistent set of banners and booth graphics that read from across the hall.</p></div>
+    </div>
+    <div class="gal"><figure class="s3"><button type="button" aria-label="Enlarge: Banner: launching ICyte Access Management"><img src="img/cases/ic-10.webp" alt="Banner: launching ICyte Access Management" loading="lazy"></button><figcaption>Pull-up banners</figcaption></figure><figure class="s3"><button type="button" aria-label="Enlarge: Banner: Distribution"><img src="img/cases/ic-12.webp" alt="Banner: Distribution" loading="lazy"></button></figure><figure class="s3"><button type="button" aria-label="Enlarge: Banner: One platform, one trusted partner"><img src="img/cases/ic-15.webp" alt="Banner: One platform, one trusted partner" loading="lazy"></button></figure><figure class="s3"><button type="button" aria-label="Enlarge: Banner: Patient data refinery"><img src="img/cases/ic-17.webp" alt="Banner: Patient data refinery" loading="lazy"></button></figure><figure class="s6"><button type="button" aria-label="Enlarge: Booth back wall design with three panels"><img src="img/cases/ic-19.webp" alt="Booth back wall design with three panels" loading="lazy"></button><figcaption>Booth wall</figcaption></figure><figure class="s6"><button type="button" aria-label="Enlarge: Booth layout with side towers"><img src="img/cases/ic-20.webp" alt="Booth layout with side towers" loading="lazy"></button><figcaption>Booth layout</figcaption></figure></div>
+  </section>
+</div>
+</main>
+<nav class="next" aria-label="Next project"><div class="wrap">
+  <a class="go" href="case-bowker.html"><div class="label">Next</div><h2>The ISBN store, and the search behind it →</h2></a>
+  <a class="btn" href="index.html#work">All case studies</a>
+</div></nav>
+<dialog id="lb" aria-label="Enlarged image"><button type="button" id="lbClose">Close ✕</button><img id="lbImg" alt=""><p id="lbCap"></p></dialog>
+<script>
+var lb=document.getElementById('lb'),li=document.getElementById('lbImg'),lc=document.getElementById('lbCap');
+document.querySelectorAll('.gal button').forEach(function(b){b.addEventListener('click',function(){
+  var i=b.querySelector('img');li.src=i.src;li.alt=i.alt;lc.textContent=i.alt;
+  if(lb.showModal)lb.showModal();else window.open(i.src,'_blank','noopener');});});
+document.getElementById('lbClose').addEventListener('click',function(){lb.close();});
+lb.addEventListener('click',function(e){if(e.target===lb)lb.close();});
+</script>
+</body>
+</html>

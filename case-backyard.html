@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Backyard &amp; Trail · Pat David</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="css/case.css">
+<script>
+(function(){var r=document.documentElement,k='pd-theme';
+try{var t=localStorage.getItem(k);if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}
+function dark(){var t=r.getAttribute('data-theme');return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;}
+function sync(){var b=document.getElementById('themeBtn');if(b)b.setAttribute('aria-label',dark()?'Switch to light mode':'Switch to dark mode');}
+document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest('#themeBtn'))return;
+  var t=dark()?'light':'dark';r.setAttribute('data-theme',t);try{localStorage.setItem(k,t);}catch(e){}sync();});
+document.addEventListener('DOMContentLoaded',sync);sync();})();
+</script>
+</head>
+<body>
+<header><div class="wrap"><a class="mark" href="index.html">Pat David</a><a class="back" href="index.html#backyard">← All work</a><button class="theme" id="themeBtn" type="button" aria-label="Switch theme"><svg class="moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div></header>
+<main>
+<div class="top"><div class="wrap head">
+  <div><div class="label">Building with AI · Safety-first field guide · Oct 2026</div><h1>Backyard &amp; Trail</h1><p>Shows the dangerous plants, wildlife and fungi documented near any trail, and never tells you anything is safe. I reframed a &ldquo;scan it&rdquo; idea around awareness, because an app that misidentifies a mushroom can get someone hurt.</p><div class="links"><a class="btn" href="https://captbosh-glitch.github.io/backyard-trail/" target="_blank" rel="noopener">Open the app ↗</a><a class="btn ghost" href="https://captbosh-glitch.github.io/backyard-trail/case-study/" target="_blank" rel="noopener">Full case study ↗</a></div></div>
+  <dl class="spec"><dt>Role</dt><dd>Concept, UX and visual design</dd><dt>Built with</dt><dd>Claude, for critique and engineering</dd><dt>Data</dt><dd>iNaturalist, OpenStreetMap, Wikimedia Commons</dd><dt>Status</dt><dd>Live web app, works with no signal</dd></dl>
+</div><div class="wrap"><figure class="hero-shot"><img src="img/cases/by-guide.webp" alt="Regional guide for Jenny Lake with a sightings map and cards for grizzly bear and mountain lion"></figure></div></div>
+<div class="wrap">
+  <nav class="toc" aria-label="Projects in this case"><a href="#critique">01 · Five screens, then a hard critique</a><a href="#trail">02 · Built for the trail</a></nav>
+  <section class="part" id="critique">
+    <div class="part-head"><div><span class="n">01</span><h2>Five screens, then a hard critique</h2></div><p>The look was right; the safety story wasn&rsquo;t</p></div>
+    <div class="story">
+      <div><h3>The problem</h3><p>The first Figma pass looked like an old field guide, but reviewing it against the safety rules showed where the design quietly broke them. &ldquo;What did you spot?&rdquo; invited the exact guess the product had ruled out.</p></div>
+      <div><h3>What I did</h3><p>I designed the core flow in Figma, then worked through the critique: the camera became &ldquo;Compare a photo,&rdquo; harm levels got written labels and a meter you can read without color, and every count now comes from real research-grade sightings within 10 miles.</p></div>
+      <div class="result"><h3>What changed</h3><p>Eight decisions that made it trustworthy, from the camera to the harm scale.</p></div>
+    </div>
+    <div class="gal"><figure class="s4"><button type="button" aria-label="Enlarge: Figma mockup of the welcome screen"><img src="img/cases/by-mwel.webp" alt="Figma mockup of the welcome screen" loading="lazy"></button><figcaption>Mockup · welcome</figcaption></figure><figure class="s4"><button type="button" aria-label="Enlarge: Figma mockup of regional results"><img src="img/cases/by-mres.webp" alt="Figma mockup of regional results" loading="lazy"></button><figcaption>Mockup · results</figcaption></figure><figure class="s4"><button type="button" aria-label="Enlarge: Figma mockup of the What did you spot? camera dialog"><img src="img/cases/by-mcam.webp" alt="Figma mockup of the What did you spot? camera dialog" loading="lazy"></button><figcaption>Mockup · the camera that changed</figcaption></figure><figure class="s6"><button type="button" aria-label="Enlarge: Moose detail with harm levels for people and dogs"><img src="img/cases/by-det.webp" alt="Moose detail with harm levels for people and dogs" loading="lazy"></button><figcaption>Field-guide entry</figcaption></figure><figure class="s3"><button type="button" aria-label="Enlarge: Compare a photo on a phone, under a Treat it as dangerous banner"><img src="img/cases/by-p-cam.webp" alt="Compare a photo on a phone, under a Treat it as dangerous banner" loading="lazy"></button><figcaption>Compare, not identify</figcaption></figure><figure class="s3"><button type="button" aria-label="Enlarge: Result cards with engraved illustrations"><img src="img/cases/by-p-cards.webp" alt="Result cards with engraved illustrations" loading="lazy"></button><figcaption>Field-guide cards</figcaption></figure></div>
+  </section>
+  <section class="part" id="trail">
+    <div class="part-head"><div><span class="n">02</span><h2>Built for the trail</h2></div><p>Dogs, emergencies and no signal</p></div>
+    <div class="story">
+      <div><h3>The problem</h3><p>The idea began with a dog, but no screen considered dogs. And a trail app gets used with one bar of signal, or none.</p></div>
+      <div><h3>What I did</h3><p>A dog switch re-rates every hazard and adds dog-specific advice. A red Emergency button is on every guide screen. &ldquo;Save for offline&rdquo; keeps a place&rsquo;s guide on the phone, and there&rsquo;s no account to sign into at the trailhead.</p></div>
+      <div class="result"><h3>What changed</h3><p>The right action is one tap away, with or without a connection.</p></div>
+    </div>
+    <div class="gal"><figure class="s6"><button type="button" aria-label="Enlarge: Everglades guide with Hiking with a dog turned on"><img src="img/cases/by-dog.webp" alt="Everglades guide with Hiking with a dog turned on" loading="lazy"></button><figcaption>Hiking with a dog</figcaption></figure><figure class="s3"><button type="button" aria-label="Enlarge: Emergency numbers on a phone"><img src="img/cases/by-p-sos.webp" alt="Emergency numbers on a phone" loading="lazy"></button><figcaption>Emergency</figcaption></figure><figure class="s3"><button type="button" aria-label="Enlarge: Saved places with an offline pack"><img src="img/cases/by-p-saved.webp" alt="Saved places with an offline pack" loading="lazy"></button><figcaption>Offline packs</figcaption></figure></div>
+  </section>
+</div>
+</main>
+<nav class="next" aria-label="Next project"><div class="wrap">
+  <a class="go" href="case-playoff-beard.html"><div class="label">Next</div><h2>Playoff Beard →</h2></a>
+  <a class="btn" href="index.html#ai">All AI builds</a>
+</div></nav>
+<dialog id="lb" aria-label="Enlarged image"><button type="button" id="lbClose">Close ✕</button><img id="lbImg" alt=""><p id="lbCap"></p></dialog>
+<script>
+var lb=document.getElementById('lb'),li=document.getElementById('lbImg'),lc=document.getElementById('lbCap');
+document.querySelectorAll('.gal button').forEach(function(b){b.addEventListener('click',function(){
+  var i=b.querySelector('img');li.src=i.src;li.alt=i.alt;lc.textContent=i.alt;
+  if(lb.showModal)lb.showModal();else window.open(i.src,'_blank','noopener');});});
+document.getElementById('lbClose').addEventListener('click',function(){lb.close();});
+lb.addEventListener('click',function(e){if(e.target===lb)lb.close();});
+</script>
+</body>
+</html>

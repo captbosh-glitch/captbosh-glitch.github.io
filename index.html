@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Pat David: product and experience design leader. Case studies, AI-built products, books and illustration.">
+<title>Pat David Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+/* Layout: a drafting sheet. Pencil-blue grid and annotations (the comic artist's non-photo blue),
+   ink type, one marker-orange accent for section headers and dates. Wide expanded display face, serif for reading, mono for specs. */
+:root{
+  --paper:#F1F3F0; --sheet:#FAFBF9; --ink:#15181C; --ink-2:#4A525C; --rule:#D5DBDF;
+  --pencil:#7FB8DC; --pencil-ink:#1E5C93; --pencil-wash:rgba(127,184,220,.16); --accent:#AE4A16; --band:#0E1217; --band-ink:#EEF1F3; --glow:#6CC6F0;
+  --display:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --body:"Source Serif 4",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111418; --sheet:#171B20; --ink:#EEF1F3; --ink-2:#A3ADB8; --rule:#2B323A;
+  --pencil:#4E8DB8; --pencil-ink:#8CC3E8; --pencil-wash:rgba(78,141,184,.14); --accent:#F0894A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111418; --sheet:#171B20; --ink:#EEF1F3; --ink-2:#A3ADB8; --rule:#2B323A;
+  --pencil:#4E8DB8; --pencil-ink:#8CC3E8; --pencil-wash:rgba(78,141,184,.14); --accent:#F0894A; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body);
+  background-image:linear-gradient(var(--pencil-wash) 1px,transparent 1px),linear-gradient(90deg,var(--pencil-wash) 1px,transparent 1px);
+  background-size:32px 32px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--pencil-ink);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--pencil-ink)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+
+/* header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule)}
+header .wrap{display:flex;align-items:center;gap:24px;padding-block:14px}
+.mark{font:800 19px/1 var(--display);font-stretch:118%;text-decoration:none;letter-spacing:-.01em}
+nav{display:flex;gap:22px;margin-left:auto;flex-wrap:wrap}
+nav a{font:500 14px/1 var(--display);font-stretch:100%;text-decoration:none;color:var(--ink-2)}
+nav a:hover{color:var(--ink)}
+.cta{font:600 14px/1 var(--display);text-decoration:none;padding:10px 14px;border:1.5px solid var(--glow);background:var(--glow);color:#0B1015;border-radius:2px}
+.cta:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+
+/* hero: the drafting grid tips over into a game grid. Dark in both themes, like the art band. */
+.hero-band{background:var(--band);color:var(--band-ink);position:relative;overflow:hidden;isolation:isolate;border-bottom:1px solid var(--rule)}
+.hero-band::before{content:"";position:absolute;inset:0;z-index:-2;background-image:linear-gradient(rgba(108,198,240,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(108,198,240,.07) 1px,transparent 1px);background-size:32px 32px}
+.floor{position:absolute;left:-60%;right:-60%;top:calc(100% - 230px);height:700px;z-index:-1;opacity:.85;
+  background-image:linear-gradient(var(--glow) 1.5px,transparent 1.5px),linear-gradient(90deg,var(--glow) 1.5px,transparent 1.5px);
+  background-size:72px 72px;transform:perspective(260px) rotateX(58deg);transform-origin:50% 0;
+  -webkit-mask-image:linear-gradient(to bottom,transparent,#000 25%);mask-image:linear-gradient(to bottom,transparent,#000 25%);
+  animation:run 3s linear infinite}
+.horizon{position:absolute;left:0;right:0;bottom:230px;height:1px;z-index:-1;background:var(--glow);box-shadow:0 0 28px 6px rgba(108,198,240,.35);opacity:.7}
+@keyframes run{to{background-position:0 72px}}
+.hero{padding-block:84px 290px}
+.hero .label{color:var(--glow)}
+.hero h1{font-size:clamp(46px,8.6vw,118px);line-height:.92;font-weight:850;font-stretch:122%;letter-spacing:-.025em;max-width:12ch;margin-top:18px}
+.hero h1 em{font-style:normal;color:var(--glow);text-shadow:0 0 18px rgba(108,198,240,.55),0 0 2px rgba(108,198,240,.9)}
+.cite{display:block;margin-top:16px;font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;color:color-mix(in srgb,var(--band-ink) 62%,transparent)}
+.hero .lede{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px;margin-top:40px;align-items:end}
+.hero p{margin:0;font-size:20px;line-height:1.55;max-width:58ch;color:color-mix(in srgb,var(--band-ink) 80%,transparent)}
+.hero p b{color:var(--band-ink);font-weight:600}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1.5px solid var(--band-ink)}
+.facts div{padding:12px 12px 0 0}
+.facts strong{display:block;font:800 34px/1 var(--display);font-stretch:112%;font-variant-numeric:tabular-nums}
+.facts span{font-family:var(--mono);font-size:12px;color:color-mix(in srgb,var(--band-ink) 70%,transparent)}
+.hero .links{margin-top:32px}
+.hero .btn{border-color:var(--band-ink);color:var(--band-ink)}
+.hero .btn.solid{background:var(--glow);border-color:var(--glow);color:#0B1015}
+.hero .btn:hover{background:var(--band-ink);border-color:var(--band-ink);color:#0B1015}
+
+/* lineage timeline */
+.lineage{margin-top:0;background:var(--sheet);border:1px solid var(--rule);padding:22px 24px 26px;position:relative}
+.lineage .head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.lineage .head span:last-child{color:var(--ink-2)}
+.track{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:relative}
+.track::before{content:"";position:absolute;left:8px;right:8px;top:7px;border-top:2px dashed var(--pencil)}
+.stop{position:relative;padding-right:16px;text-decoration:none;display:block}
+.stop i{display:block;width:16px;height:16px;border-radius:50%;background:var(--sheet);border:2.5px solid var(--pencil-ink);position:relative;margin-bottom:14px}
+.stop:last-child i{background:var(--pencil-ink)}
+.stop .d{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.06em}
+.stop h3{font-size:21px;font-stretch:108%;font-weight:750;margin:4px 0 4px}
+.stop p{margin:0;font-size:14.5px;line-height:1.45;color:var(--ink-2)}
+.stop:hover h3{text-decoration:underline;text-decoration-color:var(--pencil);text-underline-offset:4px;text-decoration-thickness:2px}
+
+/* sections */
+section{padding-block:72px 24px}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;margin-bottom:36px;border-bottom:1.5px solid var(--ink);padding-bottom:18px}
+.sec-head h2{font-size:clamp(30px,4.4vw,52px);line-height:1;font-weight:800;font-stretch:118%;letter-spacing:-.02em;margin-top:8px}
+.sec-head p{margin:0;color:var(--ink-2);max-width:52ch}
+/* section headers take the orange accent, so they read apart from the black work titles */
+.sec-head h2{color:var(--accent)}
+.art .sec-head h2{color:#F0894A}
+/* the label above a section header goes quiet, so the orange title is the one accent there */
+.sec-head .label{color:var(--ink-2)}
+.art .sec-head .label{color:color-mix(in srgb,var(--band-ink) 62%,transparent)}
+
+/* featured case studies */
+.case{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px;padding-block:28px;border-bottom:1px solid var(--rule)}
+.case:nth-of-type(even) .shot{order:2}
+.shot{position:relative;margin:0}
+.shot img{display:block;width:100%;height:auto;border:1px solid var(--rule);box-shadow:0 1px 0 var(--rule),0 18px 40px -24px rgba(20,30,40,.35)}
+.shot .phone{position:absolute;right:-14px;bottom:-22px;width:24%;border-radius:14px;border:3px solid var(--ink);box-shadow:0 14px 30px -12px rgba(0,0,0,.4)}
+.shot figcaption{font-family:var(--mono);font-size:11.5px;color:var(--pencil-ink);margin-top:10px;letter-spacing:.04em}
+.case h3{font-size:clamp(26px,3vw,36px);font-weight:800;font-stretch:115%;letter-spacing:-.015em;line-height:1.05;margin:8px 0 12px}
+.case .sum{margin:0 0 18px;font-size:18px}
+.case dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0 0 18px;font-size:15px}
+.case dt{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);padding-top:3px}
+.case dd{margin:0}
+.nums{display:flex;gap:16px 24px;flex-wrap:wrap;margin:0 0 20px;padding:14px 0;border-block:1px dashed var(--pencil)}
+.nums div strong{display:block;font:800 26px/1 var(--display);font-stretch:112%;font-variant-numeric:tabular-nums}
+.nums div span{font-family:var(--mono);font-size:11.5px;color:var(--ink-2)}
+.links{display:flex;gap:12px;flex-wrap:wrap}
+/* buttons pick up the hero's grid glow: solid = glow, outline = pencil blue */
+.btn{font:600 14px/1 var(--display);text-decoration:none;padding:11px 14px;border:1.5px solid var(--pencil-ink);color:var(--pencil-ink);border-radius:2px;display:inline-flex;gap:8px;align-items:center}
+.btn.solid{background:var(--glow);border-color:var(--glow);color:#0B1015}
+.btn:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+
+/* AI builds: six equal cards; more design work: two */
+.ent{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:44px 28px;margin-top:40px}
+.more{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 32px;padding-top:36px}
+.more-head{grid-column:1/-1}
+.job{display:flex;flex-direction:column}
+.job .pic{display:block;aspect-ratio:16/10;overflow:hidden;border:1px solid var(--rule);background:var(--sheet)}
+.job .pic img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+/* phone mockups shown whole on their own white backdrop, in both themes */
+.job .pic.fit{background:#fff}
+.job .pic.fit img{object-fit:contain;padding:12px 0 0}
+.job .pic:hover{border-color:var(--pencil-ink)}
+.job .meta{display:flex;justify-content:space-between;gap:12px;margin:14px 0 4px;flex-wrap:wrap}
+.job .meta span:last-child{color:var(--ink-2)}
+.job h3{font-size:24px;font-weight:780;font-stretch:112%;margin-bottom:6px}
+.job p{margin:0;font-size:16px;color:var(--ink-2)}
+.job p b{color:var(--ink);font-weight:600}
+.job .links{margin-top:auto;padding-top:16px}
+.shot a{display:block}
+.shot a:hover img{border-color:var(--pencil-ink)}
+.nda{margin-top:36px}
+.nda{display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:20px 22px;border:1.5px dashed var(--pencil);background:var(--pencil-wash)}
+.nda h3{font-size:22px;font-weight:780;font-stretch:112%}
+.nda p{margin:0;color:var(--ink-2);font-size:15.5px}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;counter-reset:s}
+.step{padding:0 18px 0 0;border-left:1px solid var(--rule);padding-left:16px}
+.step:first-child{border-left:0;padding-left:0}
+.step b{display:block;font-family:var(--mono);font-size:12px;color:var(--accent);margin-bottom:10px}
+.step h3{font-size:19px;font-weight:750;font-stretch:108%;margin-bottom:6px}
+.step p{margin:0;font-size:15px;line-height:1.5;color:var(--ink-2)}
+.tools{margin-top:28px;display:flex;flex-wrap:wrap;gap:8px}
+.tools span{font-family:var(--mono);font-size:12px;padding:5px 9px;border:1px solid var(--rule);background:var(--sheet)}
+
+/* art */
+.art{background:var(--band);color:var(--band-ink);border-block:1px solid var(--rule);margin-top:72px;padding-block:72px}
+.art .sec-head{border-color:var(--band-ink)}
+.art .label{color:var(--pencil)}
+.art .sec-head p{color:color-mix(in srgb,var(--band-ink) 75%,transparent)}
+.gallery{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px;align-items:start}
+.gallery a{display:block;overflow:hidden;background:#fff}
+.gallery img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;transition:transform .4s ease}
+.gallery a:hover img{transform:scale(1.04)}
+.gallery a:nth-child(even){margin-top:36px}
+.art .more{margin-top:28px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.art .btn{border-color:var(--band-ink);color:var(--band-ink)}
+.art .btn:hover{background:var(--glow);border-color:var(--glow);color:#0d1013}
+.art .mono{color:color-mix(in srgb,var(--band-ink) 70%,transparent)}
+
+/* writing */
+.books{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.book{text-decoration:none;display:flex;flex-direction:column;gap:6px}
+.book .cover{aspect-ratio:5/8;background:var(--sheet);border:1px solid var(--rule);margin-bottom:12px;box-shadow:0 18px 36px -20px rgba(20,30,40,.45);max-width:260px;transition:transform .3s ease}
+.book:hover .cover{transform:translateY(-4px) rotate(-1deg)}
+.book .cover img{width:100%;height:100%;object-fit:cover;display:block}
+.book h3{font-size:24px;font-weight:780;font-stretch:112%}
+.book p{margin:0;font-size:15.5px;color:var(--ink-2)}
+.book:hover h3{color:var(--pencil-ink)}
+.shelf-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:56px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
+.shelf-head .mono{color:var(--ink-2)}
+.shelf{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px;align-items:start}
+.shelf a{text-decoration:none;display:flex;flex-direction:column;gap:3px}
+.shelf img{display:block;width:100%;aspect-ratio:2/3;object-fit:cover;object-position:top;border:1px solid var(--rule);margin-bottom:8px;transition:transform .3s ease}
+.shelf a:hover img{transform:translateY(-3px)}
+.shelf b{font:700 15px/1.2 var(--display);font-stretch:106%}
+.shelf span{font-family:var(--mono);font-size:11.5px;color:var(--ink-2)}
+.more-w{margin-top:32px;display:flex;justify-content:space-between;gap:20px 32px;flex-wrap:wrap;align-items:center}
+.more-w p{margin:0;max-width:62ch;color:var(--ink-2);font-size:16px}
+.more-w p b{color:var(--ink)}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px}
+.about .who{display:flex;gap:20px;align-items:center;margin-bottom:20px}
+.about .who img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:2px solid var(--ink)}
+.about .who h3{font-size:28px;font-weight:800;font-stretch:115%}
+.about p{margin:0 0 14px}
+.cv{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--ink)}
+.cv li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:12px 0;border-bottom:1px solid var(--rule)}
+.cv strong{font-family:var(--display);font-weight:700;font-stretch:108%}
+.cv span{font-family:var(--mono);font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.cv em{grid-column:1/-1;font-style:normal;font-size:14.5px;color:var(--ink-2)}
+
+footer{margin-top:72px;border-top:1.5px solid var(--ink);padding-block:40px 56px}
+footer .wrap{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:end}
+footer h2{font-size:clamp(28px,4vw,44px);font-weight:800;font-stretch:118%;letter-spacing:-.02em;line-height:1}
+.contact{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.copy{font-family:var(--mono);font-size:14px;padding:11px 14px;border:1.5px solid var(--ink);background:var(--sheet);user-select:all}
+.copybtn{font:600 14px/1 var(--display);padding:12px 14px;border:0;background:var(--glow);color:#0B1015;cursor:pointer;border-radius:2px}
+
+/* mockup note */
+.note{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:8;max-width:300px;background:var(--sheet);border:1.5px solid var(--pencil-ink);padding:12px 14px;font-size:13.5px;line-height:1.45;box-shadow:0 10px 30px -12px rgba(0,0,0,.35)}
+.note b{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--pencil-ink);display:block;margin-bottom:4px}
+.note button{position:absolute;top:6px;right:8px;border:0;background:none;font-size:16px;cursor:pointer;color:var(--ink-2)}
+
+@media (max-width:900px){
+  .hero{padding-block:64px 220px}
+  .floor{top:calc(100% - 170px)}
+  .horizon{bottom:170px}
+  .hero .lede,.sec-head,.case,.about{grid-template-columns:minmax(0,1fr);gap:28px}
+  .case:nth-of-type(even) .shot{order:0}
+  .steps{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px 0}
+  .step:nth-child(odd){border-left:0;padding-left:0}
+  .gallery{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .shelf{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .books{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gallery a:nth-child(even){margin-top:0}
+  .gallery a:nth-child(even){margin-top:28px}
+  nav{display:none}
+}
+@media (max-width:560px){
+  .ent{grid-template-columns:minmax(0,1fr)}
+  body{font-size:16px}
+  .track{grid-template-columns:minmax(0,1fr);gap:18px}
+  .track::before{left:7px;right:auto;top:8px;bottom:8px;border-top:0;border-left:2px dashed var(--pencil)}
+  .stop{padding-left:32px}
+  .stop i{position:absolute;left:0;top:2px}
+  .ent{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .more,.steps{grid-template-columns:minmax(0,1fr)}
+  .books{grid-template-columns:minmax(0,1fr);gap:32px}
+  .book .cover{max-width:200px}
+  .step{border-left:0;padding-left:0}
+  .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gallery a:nth-child(even){margin-top:0}
+  .gallery a:nth-child(even){margin-top:24px}
+  .nda{grid-template-columns:minmax(0,1fr)}
+  .shot .phone{right:-6px;width:28%}
+  .facts strong{font-size:28px}
+  .note{left:max(16px,env(safe-area-inset-left,0px));max-width:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+/* theme toggle: the visitor's choice beats the system setting, and is remembered */
+.theme{all:unset;box-sizing:border-box;cursor:pointer;width:38px;height:38px;display:inline-grid;place-items:center;border:1.5px solid var(--rule);border-radius:2px;color:var(--ink)}
+.theme:hover{border-color:var(--pencil-ink);color:var(--pencil-ink)}
+.theme:focus-visible{outline:2px solid var(--pencil-ink);outline-offset:3px}
+.theme .sun,:root[data-theme="dark"] .theme .moon{display:none}
+:root[data-theme="dark"] .theme .sun{display:block}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .theme .sun{display:block}:root:not([data-theme="light"]) .theme .moon{display:none}}
+</style>
+
+<script>
+(function(){var r=document.documentElement,k='pd-theme';
+try{var t=localStorage.getItem(k);if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}
+function dark(){var t=r.getAttribute('data-theme');return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;}
+function sync(){var b=document.getElementById('themeBtn');if(b)b.setAttribute('aria-label',dark()?'Switch to light mode':'Switch to dark mode');}
+document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest('#themeBtn'))return;
+  var t=dark()?'light':'dark';r.setAttribute('data-theme',t);try{localStorage.setItem(k,t);}catch(e){}sync();});
+document.addEventListener('DOMContentLoaded',sync);sync();})();
+</script>
+<header>
+  <div class="wrap">
+    <a class="mark" href="#top">Pat David</a>
+    <nav aria-label="Sections">
+      <a href="#work">Case studies</a>
+      <a href="#ai">Building with AI</a>
+      <a href="#process">Process</a>
+      <a href="#art">Art</a>
+      <a href="#writing">Writing</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="cta" href="#contact">Get in touch</a>
+    <button class="theme" id="themeBtn" type="button" aria-label="Switch theme"><svg class="moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero-band">
+    <div class="horizon" aria-hidden="true"></div>
+    <div class="floor" aria-hidden="true"></div>
+    <div class="wrap hero">
+      <div class="label">Product &amp; Experience Design Leader · Matawan, NJ</div>
+      <h1>I fight for the <em>users</em>.</h1>
+      <span class="cite">— TRON, 1982</span>
+      <div class="lede">
+        <p>For more than 20 years I&rsquo;ve led UX for products where a confusing screen costs someone something: <b>Medicaid enrollment for two states, pharmacy data for drug makers, ISBNs for first-time authors</b>, and investment reporting at Prudential today. Lately I also design with AI and ship working products myself.</p>
+        <div class="facts" aria-label="At a glance">
+          <div><strong>20+</strong><span>years leading UX</span></div>
+          <div><strong>2</strong><span>industry awards, 2022</span></div>
+          <div><strong>4</strong><span>industries</span></div>
+        </div>
+      </div>
+      <div class="links"><a class="btn solid" href="#work">See the case studies</a><a class="btn" href="#ai">What I&rsquo;m building with AI</a></div>
+    </div>
+  </div>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="label">Leading teams · 1999 to today</div><h2>Case studies</h2></div>
+        <p>Research-led design for finance, healthcare, pharma and publishing. Each one opens into the full project: the problem, my role, the work and what changed.</p>
+      </div>
+
+      <article class="case" id="prudential">
+        <figure class="shot">
+          <a href="case-prudential.html"><img src="img/prudential.jpg" alt="Prudential Data Marketplace home page on a desktop monitor" loading="lazy"></a>
+          <figcaption>Data Marketplace · one place to find and use company data</figcaption>
+        </figure>
+        <div>
+          <div class="label">Prudential · Manager, Experience Design · 2022–present</div>
+          <h3>Fewer manual steps, clearer signals, for investment teams</h3>
+          <p class="sum">I lead CX for four agile teams: research on the company intranet and app, a data marketplace, and the reporting and pipeline dashboards analysts and leadership rely on.</p>
+          <div class="nums">
+            <div><strong>50+</strong><span>users in one live usability session</span></div>
+            <div><strong>8–15 hrs</strong><span>saved per analyst, every report cycle</span></div>
+            <div><strong>~19</strong><span>pipelines on one live monitor</span></div>
+          </div>
+          <dl><dt>Work</dt><dd>Intranet and app research · Data Marketplace · report automation · Power BI dashboards · statutory reporting</dd></dl>
+          <div class="links"><a class="btn solid" href="case-prudential.html">Read the case study →</a></div>
+        </div>
+      </article>
+
+      <article class="case" id="maximus">
+        <figure class="shot">
+          <a href="case-maximus.html"><img src="img/maximus.jpg" alt="HealthChoice Illinois site shown on phone, tablet and desktop" loading="lazy"></a>
+          <figcaption>HealthChoice Illinois · responsive enrollment site</figcaption>
+        </figure>
+        <div>
+          <div class="label">Maximus · UX Lead · 2020–2022</div>
+          <h3>Medicaid enrollment for Illinois and Louisiana</h3>
+          <p class="sum">Most people enroll in Medicaid once a year and forget how in between. I led the designers and researchers who rebuilt the enrollment experience for two states, on the web and in native apps.</p>
+          <div class="nums">
+            <div><strong>2</strong><span>state programs</span></div>
+            <div><strong>3</strong><span>platforms: web, iOS, Android</span></div>
+            <div><strong>2</strong><span>WMA awards, 2022</span></div>
+          </div>
+          <dl><dt>Result</dt><dd>More applications completed online, fewer calls to the call center</dd><dt>Also</dt><dd>Persona system built as editable templates for every team</dd></dl>
+          <div class="links"><a class="btn solid" href="case-maximus.html">Read the case study →</a></div>
+        </div>
+      </article>
+
+      <article class="case" id="integrichain">
+        <figure class="shot">
+          <a href="case-integrichain.html"><img src="img/integrichain.jpg" alt="IntegriChain dashboard with customizable chart widgets" loading="lazy"></a>
+          <figcaption>Pharmacy Dashboard · each role builds its own view</figcaption>
+        </figure>
+        <div>
+          <div class="label">IntegriChain · Lead UX Designer · 2014–2020</div>
+          <h3>Pharma data tools people can run themselves</h3>
+          <p class="sum">Drug makers use IntegriChain to see how their products move through pharmacies and distributors. I designed the dashboards and internal tools behind that data, and the brand work around them.</p>
+          <dl><dt>Work</dt><dd>Self-managed pharmacy dashboard · ECS Optimizer, which put a multi-tool workflow on one screen · inventory journey map · trade-show and social graphics</dd><dt>Tools</dt><dd>Balsamiq, Sketch, Spotfire, Adobe CC</dd></dl>
+          <div class="links"><a class="btn solid" href="case-integrichain.html">Read the case study →</a></div>
+        </div>
+      </article>
+
+      <article class="case" id="bowker">
+        <figure class="shot">
+          <a href="case-bowker.html"><img src="img/bowker.jpg" alt="Bowker Identifier Services storefront" loading="lazy"></a>
+          <figcaption>Identifier Services · where authors buy ISBNs</figcaption>
+        </figure>
+        <div>
+          <div class="label">Bowker · Senior UX Designer · 2007–2014</div>
+          <h3>The ISBN store, and the search behind it</h3>
+          <p class="sum">Bowker is the official ISBN agency for the US. I designed the store where independent authors buy ISBNs, and Bookwire, the book search librarians use, with a companion app for the stacks.</p>
+          <dl><dt>Result</dt><dd>A/B tests sent traffic to the winning layouts; cross-sell product pages raised average order value</dd><dt>Role</dt><dd>UX designer and Drupal theme developer on an eight-person team</dd></dl>
+          <div class="links"><a class="btn solid" href="case-bowker.html">Read the case study →</a></div>
+        </div>
+      </article>
+
+      <article class="case" id="physicians">
+        <figure class="shot">
+          <a href="case-physicians.html"><img src="img/physicians.jpg" alt="Physician's dashboard with network charts" loading="lazy"></a>
+          <figcaption>Network dashboard · lists, analytics, partner links</figcaption>
+        </figure>
+        <div>
+          <div class="label">Healthcare network · Sole UX Designer</div>
+          <h3>Physician&rsquo;s Dashboard</h3>
+          <p class="sum">A shared dashboard for physicians, hospitals and clinics to coordinate patient care. I shaped it with an advisory council of medical professionals and iterated in Figma until it fit how they work.</p>
+          <div class="links"><a class="btn solid" href="case-physicians.html">Read the case study →</a></div>
+        </div>
+      </article>
+
+      <div class="more">
+        <div class="label more-head">More design work</div>
+        <article class="job" id="afrikan">
+          <a class="pic" href="case-afrikan.html"><img src="img/cases/afr-01.webp" alt="This is Afrikan footwear site on a laptop" loading="lazy"></a>
+          <div class="meta mono"><span class="label">This is Afrikan</span><span>Web design</span></div>
+          <h3>Footwear that celebrates Africa</h3>
+          <p>A storefront built on the brand&rsquo;s vibrant palette, where every shoe shows the countries its materials come from.</p>
+          <div class="links"><a class="btn solid" href="case-afrikan.html">See the project →</a></div>
+        </article>
+        <article class="job" id="sellsheets">
+          <a class="pic" href="case-sellsheets.html"><img src="img/cases/ss-03.webp" alt="Keriton sell sheet for an infant-feeding platform" loading="lazy" style="object-position:center 20%"></a>
+          <div class="meta mono"><span class="label">Print · various clients</span><span>Adobe CC</span></div>
+          <h3>Sell sheets</h3>
+          <p>Seminar leave-behinds for IntegriChain, Keriton and SCYNEXIS: dense content turned into scannable sections with a clear call to action.</p>
+          <div class="links"><a class="btn solid" href="case-sellsheets.html">See the project →</a></div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="ai">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="label">Designed in Figma · Built with Claude Code</div><h2>Building with AI</h2></div>
+        <p>The same process, with a shorter loop. Since September I&rsquo;ve designed and shipped my own products: I own the product and the design, Claude writes the code to my specs, and I review every screen.</p>
+      </div>
+
+      <div class="lineage">
+        <div class="head mono"><span class="label">Each one built on the last</span><span>Sep 28 → Oct 28, 2026</span></div>
+        <div class="track">
+          <a class="stop" href="#rtyb"><i></i><span class="d">SEP 28</span><h3>Run to Your Bets</h3><p>The automated data pipeline everything else grew from.</p></a>
+          <a class="stop" href="#playoff-beard"><i></i><span class="d">OCT 26</span><h3>Playoff Beard</h3><p>Turned that pipeline into a news collector.</p></a>
+          <a class="stop" href="#backyard"><i></i><span class="d">OCT 27</span><h3>Backyard &amp; Trail</h3><p>Added location search, maps and offline use.</p></a>
+          <a class="stop" href="#dino"><i></i><span class="d">OCT 28</span><h3>Dino Tracker</h3><p>Combined all of it, then kept growing after launch.</p></a>
+        </div>
+      </div>
+
+      <div class="ent">
+        <article class="job" id="dino">
+          <a class="pic" href="case-dino.html"><img src="img/dino.jpg" alt="Dino Tracker home page: a place search beside a painted Jurassic landscape" loading="lazy"></a>
+          <div class="meta mono"><span class="label">Field guide to deep time</span><span>601 paintings</span></div>
+          <h3>Dino Tracker</h3>
+          <p>Pick any place on Earth and see the prehistoric life found there, from live fossil records. I <b>art-directed 601 paintings</b> in one house style and added six features after launch.</p>
+          <div class="links"><a class="btn solid" href="case-dino.html">See the project →</a><a class="btn" href="https://captbosh-glitch.github.io/dino-tracker/" target="_blank" rel="noopener">Open the app ↗</a></div>
+        </article>
+        <article class="job" id="backyard">
+          <a class="pic" href="case-backyard.html"><img src="img/backyard.jpg" alt="Backyard &amp; Trail guide near Grand Teton: a map of sightings above cards for grizzly bear and mountain lion" loading="lazy"></a>
+          <div class="meta mono"><span class="label">Safety-first field guide</span><span>Works offline</span></div>
+          <h3>Backyard &amp; Trail</h3>
+          <p>Shows the dangerous plants, wildlife and fungi documented near any trail. I reframed a &ldquo;scan it&rdquo; idea around awareness, because <b>a wrong ID can get someone hurt</b>.</p>
+          <div class="links"><a class="btn solid" href="case-backyard.html">See the project →</a><a class="btn" href="https://captbosh-glitch.github.io/backyard-trail/" target="_blank" rel="noopener">Open the app ↗</a></div>
+        </article>
+        <article class="job" id="playoff-beard">
+          <a class="pic" href="case-playoff-beard.html"><img src="img/playoffbeard.jpg" alt="Playoff Beard home page with league tabs and top stories" loading="lazy"></a>
+          <div class="meta mono"><span class="label">News agent</span><span>185 pages, hourly</span></div>
+          <h3>Playoff Beard</h3>
+          <p>A sports news site that runs itself: it collects headlines, removes duplicates, tags each story by team and publishes a page for every league and team.</p>
+          <div class="links"><a class="btn solid" href="case-playoff-beard.html">See the project →</a><a class="btn" href="https://www.playoffbeard.com" target="_blank" rel="noopener">Open the site ↗</a></div>
+        </article>
+        <article class="job" id="rtyb">
+          <a class="pic" href="case-rtyb.html"><img src="img/rtyb.jpg" alt="Run to Your Bets home page: The first period. The first quarter. The first inning." loading="lazy"></a>
+          <div class="meta mono"><span class="label">Built with my brother</span><span>Every 10 min</span></div>
+          <h3>Run to Your Bets</h3>
+          <p>Records, trends and odds for the first period, quarter or inning of every game. My brother runs it with an admin I designed, including <b>AI that reads odds sheets</b>.</p>
+          <div class="links"><a class="btn solid" href="case-rtyb.html">See the project →</a><a class="btn" href="https://captbosh-glitch.github.io/rtyb-betting-site/" target="_blank" rel="noopener">Open the site ↗</a></div>
+        </article>
+        <article class="job" id="bb">
+          <a class="pic" href="case-bb.html"><img src="img/bb.jpg" alt="Four BB screens: sign-in, choose your mode, gym mode and the live roast feed" loading="lazy"></a>
+          <div class="meta mono"><span class="label">Social app</span><span>14 screens</span></div>
+          <h3>BB</h3>
+          <p>Friends roast and motivate each other across golf, bowling, the gym and nights out. Miro → Figma Make → Figma → Claude, <b>tested with real users</b>.</p>
+          <div class="links"><a class="btn solid" href="case-bb.html">See the project →</a><a class="btn" href="https://roast-app-snowy.vercel.app" target="_blank" rel="noopener">Open the app ↗</a></div>
+        </article>
+        <article class="job" id="gijoe">
+          <a class="pic" href="case-gijoe.html"><img src="img/gijoe-desk.jpg" alt="G.I. Joe database: character cards with team tags, search and team filters" loading="lazy"></a>
+          <div class="meta mono"><span class="label">Fan database</span><span>403 entries</span></div>
+          <h3>G.I. Joe Database</h3>
+          <p>199 characters, 44 troop types and 160 vehicles, browsable by team, with a file card for each, <b>without the clutter of a wiki</b>.</p>
+          <div class="links"><a class="btn solid" href="case-gijoe.html">See the project →</a><a class="btn" href="https://captbosh-glitch.github.io/gijoe/" target="_blank" rel="noopener">Open the site ↗</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="label">The same steps, at work and at home</div><h2>How I work</h2></div>
+        <p>I start with the people doing the work, not the request. AI shortened the gap between the sketch and the working product, so I can test real things sooner.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><b>01</b><h3>Watch the work</h3><p>Interviews, ride-alongs and analytics. Design from what people do, not only what they say.</p></div>
+        <div class="step"><b>02</b><h3>Sketch the flow</h3><p>Low-fidelity wireframes in Miro or FigJam to agree on screens and paths.</p></div>
+        <div class="step"><b>03</b><h3>Design it for real</h3><p>High-fidelity screens in Figma: type, color, copy and states.</p></div>
+        <div class="step"><b>04</b><h3>Build and critique</h3><p>Claude Code builds to the spec; I test it against real data and fix what the data shows.</p></div>
+        <div class="step"><b>05</b><h3>Keep shipping</h3><p>Use it, listen, improve. Dino Tracker gained six features after launch.</p></div>
+      </div>
+      <div class="tools" aria-label="Tools">
+        <span>Figma</span><span>Miro</span><span>Claude Code</span><span>Claude</span><span>Copilot</span><span>GitHub</span><span>Power BI</span><span>Tableau</span><span>Adobe CC</span><span>HTML / CSS</span><span>WCAG · Section 508</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="art" id="art">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="label">BFA Illustration, Pratt Institute</div><h2>I also draw</h2></div>
+        <p>Comic books, book covers, concept art and digital painting. It&rsquo;s why I could art-direct 601 paintings for Dino Tracker and keep them in one house style.</p>
+      </div>
+      <div class="gallery">
+        <a href="https://pat4883.myportfolio.com/star-wars-illustration" target="_blank" rel="noopener"><img src="img/art-n1.jpg" alt="Digital painting of Boba Fett kneeling in fire and sand beside the Sarlacc" loading="lazy"></a>
+        <a href="https://pat4883.myportfolio.com/concept-art-2" target="_blank" rel="noopener"><img src="img/art-5.jpg" alt="Ink drawing of a hulking figure in heavy shadow" loading="lazy"></a>
+        <a href="https://pat4883.myportfolio.com/star-wars-illustration" target="_blank" rel="noopener"><img src="img/art-n2.jpg" alt="Painted close-up of C-3PO" loading="lazy"></a>
+        <a href="https://pat4883.myportfolio.com/dc-comics" target="_blank" rel="noopener"><img src="img/art-n3.jpg" alt="The Flash running through crackling lightning" loading="lazy"></a>
+        <a href="https://pat4883.myportfolio.com/barbarians" target="_blank" rel="noopener"><img src="img/art-6.jpg" alt="Pencil drawing of a horned warrior with an axe" loading="lazy"></a>
+        <a href="https://pat4883.myportfolio.com/digital-paintings" target="_blank" rel="noopener"><img src="img/art-n4.jpg" alt="Bruce Lee in his yellow jumpsuit swinging nunchucks" loading="lazy"></a>
+        <a href="https://pat4883.myportfolio.com/movie-posters" target="_blank" rel="noopener"><img src="img/art-n5.jpg" alt="Burt Reynolds as the Bandit in a cowboy hat, holding a black Trans Am" loading="lazy"></a>
+      </div>
+      <div class="more"><span class="mono">Comics, covers, concept art and digital painting.</span><a class="btn" href="https://pat4883.myportfolio.com/" target="_blank" rel="noopener">See the illustration portfolio ↗</a></div>
+    </div>
+  </section>
+
+  <section id="writing">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="label">Novelist · comics writer and artist</div><h2>I write too</h2></div>
+        <p>Four novels and a shelf of comics, written, drawn and self-published. Writing a book is a long exercise in knowing your reader, which is most of what UX is.</p>
+      </div>
+      <div class="books">
+        <a class="book" href="https://www.amazon.com/dp/B0GWMWGR4N" target="_blank" rel="noopener"><div class="cover"><img src="img/books/skymaster-250840089.webp" alt="Cover of Skymaster" loading="lazy"></div><div class="label">Novel · 2026 · with Mike Fasolo</div><h3>Skymaster ↗</h3><p>The least qualified captain in space stumbles onto a treasure empires have hunted for millennia, with a petty royal prince on his tail. Then Jack learns the treasure is the galaxy&rsquo;s worst mistake.</p></a>
+        <a class="book" href="https://www.amazon.com/dp/1977684602" target="_blank" rel="noopener"><div class="cover"><img src="img/books/the-dojo-36551245.webp" alt="Cover of The Dojo" loading="lazy"></div><div class="label">Novel · 2017</div><h3>The Dojo ↗</h3><p>Five friends find a magical secret inside a Pennsylvania bonsai shop. It gives them amazing abilities, and it may cost them everything.</p></a>
+        <a class="book" href="https://www.amazon.com/dp/1727445309" target="_blank" rel="noopener"><div class="cover"><img src="img/books/one-if-by-ale-two-if-by-wine-43373412.webp" alt="Cover of One if by Ale, Two if by Wine" loading="lazy"></div><div class="label">Novel · 2018</div><h3>One if by Ale, Two if by Wine ↗</h3><p>Two brothers who only care about their next drink join the Continental Army on the eve of the British occupation of Boston. A revolutionary comedy.</p></a>
+        <a class="book" href="https://www.amazon.com/dp/B08P6MDLMH" target="_blank" rel="noopener"><div class="cover"><img src="img/books/it-s-about-time-56159900.webp" alt="Cover of It&rsquo;s About Time" loading="lazy"></div><div class="label">Novel · 2020</div><h3>It&rsquo;s About Time ↗</h3><p>A scientist builds a time machine to win back the woman he let slip away. In his future, history is rewritten with the click of a button, and everyone pays for it.</p></a>
+      </div>
+      <div class="shelf-head"><span class="label">Comics &amp; graphic novels</span><span class="mono">Written and drawn by me</span></div>
+      <div class="shelf">
+        <a href="https://www.amazon.com/dp/153009206X" target="_blank" rel="noopener"><img src="img/books/lloyd-boykin-of-earth-31444097.webp" alt="Cover of Lloyd Boykin of Earth" loading="lazy"><b>Lloyd Boykin of Earth</b><span>2016–2018 · 3 volumes</span></a>
+        <a href="https://www.amazon.com/dp/197911725X" target="_blank" rel="noopener"><img src="img/books/12-days-36551244.webp" alt="Cover of 12 Days" loading="lazy"><b>12 Days</b><span>2017</span></a>
+        <a href="https://www.amazon.com/dp/B0F54MKF8F" target="_blank" rel="noopener"><img src="img/books/the-tales-of-bob-barian-231465692.webp" alt="Cover of The Tales of Bob-Barian" loading="lazy"><b>The Tales of Bob-Barian</b><span>2025</span></a>
+        <a href="https://www.amazon.com/dp/B0F59VYTQ2" target="_blank" rel="noopener"><img src="img/books/the-weight-room-231498170.webp" alt="Cover of The Weight Room" loading="lazy"><b>The Weight Room</b><span>2025</span></a>
+        <a href="https://www.amazon.com/dp/B08NX61XZY" target="_blank" rel="noopener"><img src="img/books/pantheon-of-the-lesser-98537766.webp" alt="Cover of Pantheon of the Lesser" loading="lazy"><b>Pantheon of the Lesser</b><span>2020</span></a>
+        <a href="https://www.amazon.com/dp/1500542342" target="_blank" rel="noopener"><img src="img/books/playoff-beard-fat-vegan-22971193.webp" alt="Cover of Playoff Beard &amp; Fat Vegan" loading="lazy"><b>Playoff Beard &amp; Fat Vegan</b><span>2014 · with Mike Callari</span></a>
+      </div>
+      <div class="more-w">
+        <p>My comics have also run in <b>Heavy Metal #265</b>. And yes, Playoff Beard started as a comic strip, years before it was a news site. I also read about 100 books a year.</p>
+        <div class="links"><a class="btn solid" href="https://www.amazon.com/stores/author/B0767G97JK/allbooks" target="_blank" rel="noopener">All my books on Amazon ↗</a><a class="btn" href="https://www.goodreads.com/author/list/8459422.Pat_David" target="_blank" rel="noopener">Goodreads ↗</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <div class="who"><img src="img/pat.jpg" alt="Pat David"><div><div class="label">About</div><h3>Hi, I&rsquo;m Pat.</h3></div></div>
+        <p>I&rsquo;ve designed digital products for more than 20 years. At Oppenheimer I helped launch one of the first online trading platforms. At Bowker I designed the sites authors and librarians use to publish and find books. Today at Prudential I lead experience design for investment teams, turning complex reporting into tools people want to use.</p>
+        <p>AI is part of how I work every day. The question I find most interesting is where the machine should act, and where a person needs to make the call.</p>
+        <div class="links" style="margin-top:20px"><a class="btn solid" href="Patrick_David_Resume.pdf" target="_blank" rel="noopener">Résumé (PDF) ↗</a><a class="btn" href="https://www.linkedin.com/in/pat-david-6aaa144/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+      </div>
+      <ul class="cv" aria-label="Experience">
+        <li><strong>Prudential</strong><span>2022–now</span><em>Manager, Experience Design</em></li>
+        <li><strong>Maximus</strong><span>2020–2022</span><em>Front End Development &amp; UX Lead</em></li>
+        <li><strong>IntegriChain</strong><span>2014–2020</span><em>Lead User Experience Designer</em></li>
+        <li><strong>Bowker</strong><span>2007–2014</span><em>Senior User Experience Designer</em></li>
+        <li><strong>Oppenheimer &amp; Co.</strong><span>1999–2006</span><em>Art Director</em></li>
+        <li><strong>Pratt Institute</strong><span>1994</span><em>BFA, Illustration</em></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div><div class="label">Hiring for UX, CX or product design?</div><h2 style="margin-top:10px">Let&rsquo;s talk.</h2></div>
+    <div class="contact">
+      <span class="copy" id="email">pat@patdavid.com</span>
+      <button class="copybtn" id="copyEmail" type="button">Copy email</button>
+    </div>
+  </div>
+</footer>
+
+
+
+<script>
+document.getElementById('copyEmail').addEventListener('click', function () {
+  var b = this, t = document.getElementById('email');
+  function done(msg) { b.textContent = msg; setTimeout(function () { b.textContent = 'Copy email'; }, 1800); }
+  try {
+    navigator.clipboard.writeText(t.textContent).then(function () { done('Copied'); }, function () { select(); });
+  } catch (e) { select(); }
+  function select() { var r = document.createRange(); r.selectNodeContents(t); var s = getSelection(); s.removeAllRanges(); s.addRange(r); done('Selected'); }
+});
+
+</script>
+
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Run to Your Bets · Pat David</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="css/case.css">
+<script>
+(function(){var r=document.documentElement,k='pd-theme';
+try{var t=localStorage.getItem(k);if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}
+function dark(){var t=r.getAttribute('data-theme');return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;}
+function sync(){var b=document.getElementById('themeBtn');if(b)b.setAttribute('aria-label',dark()?'Switch to light mode':'Switch to dark mode');}
+document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest('#themeBtn'))return;
+  var t=dark()?'light':'dark';r.setAttribute('data-theme',t);try{localStorage.setItem(k,t);}catch(e){}sync();});
+document.addEventListener('DOMContentLoaded',sync);sync();})();
+</script>
+</head>
+<body>
+<header><div class="wrap"><a class="mark" href="index.html">Pat David</a><a class="back" href="index.html#rtyb">← All work</a><button class="theme" id="themeBtn" type="button" aria-label="Switch theme"><svg class="moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div></header>
+<main>
+<div class="top"><div class="wrap head">
+  <div><div class="label">Building with AI · Built with my brother · since Sep 2026</div><h1>Run to Your Bets</h1><p>Records and trends for the first period, quarter or inning of every game. My brother runs it day to day with an admin tool I designed. It&rsquo;s where the automated pipeline behind every later build started.</p><div class="links"><a class="btn" href="https://captbosh-glitch.github.io/rtyb-betting-site/" target="_blank" rel="noopener">Open the site ↗</a></div></div>
+  <dl class="spec"><dt>Role</dt><dd>Product, UX and design</dd><dt>Built with</dt><dd>Claude Code, GitHub Actions</dd><dt>Sports</dt><dd>NHL, NFL, NBA, college football and basketball, MLB, WNBA</dd><dt>Refresh</dt><dd>Every 10 minutes</dd></dl>
+</div><div class="wrap"><figure class="hero-shot"><img src="img/cases/rt-home.webp" alt="Run to Your Bets home: The first period. The first quarter. The first inning."></figure></div></div>
+<div class="wrap">
+  <nav class="toc" aria-label="Projects in this case"><a href="#pipeline">01 · A site that updates itself</a><a href="#admin">02 · Tools for the person who runs it</a></nav>
+  <section class="part" id="pipeline">
+    <div class="part-head"><div><span class="n">01</span><h2>A site that updates itself</h2></div><p>Scores, records and trends, every 10 minutes</p></div>
+    <div class="story">
+      <div><h3>The problem</h3><p>Bettors who play the opening period or quarter have to piece together records from box scores by hand.</p></div>
+      <div><h3>What I did</h3><p>I designed game, trend and team pages for each sport, built on a pipeline that pulls schedules and scores, grades every pick and rebuilds the site every 10 minutes.</p></div>
+      <div class="result"><h3>What changed</h3><p>A game page for every sport, with first-segment records and trends that stay current without anyone touching them.</p></div>
+    </div>
+    <div class="gal"><figure class="s6"><button type="button" aria-label="Enlarge: NHL games with first-period records and lines"><img src="img/cases/rt-games.webp" alt="NHL games with first-period records and lines" loading="lazy"></button><figcaption>Games · NHL</figcaption></figure><figure class="s6"><button type="button" aria-label="Enlarge: NHL trends to watch"><img src="img/cases/rt-trends.webp" alt="NHL trends to watch" loading="lazy"></button><figcaption>Trends</figcaption></figure><figure class="s6"><button type="button" aria-label="Enlarge: A game card before the redesign"><img src="img/cases/rt-card-before.webp" alt="A game card before the redesign" loading="lazy"></button><figcaption>Game card · before</figcaption></figure><figure class="s6"><button type="button" aria-label="Enlarge: The game card after: records and trends in one place"><img src="img/cases/rt-card-after.webp" alt="The game card after: records and trends in one place" loading="lazy"></button><figcaption>Game card · after</figcaption></figure></div>
+  </section>
+  <section class="part" id="admin">
+    <div class="part-head"><div><span class="n">02</span><h2>Tools for the person who runs it</h2></div><p>An admin, AI that reads odds sheets, and automatic odds</p></div>
+    <div class="story">
+      <div><h3>The problem</h3><p>My brother was typing odds in by hand for every game, every day.</p></div>
+      <div><h3>What I did</h3><p>I designed an admin with a &ldquo;what&rsquo;s missing&rdquo; list, then added AI that reads a photo of an odds sheet. Now odds publish automatically from a licensed feed, and an Odds page compares every sportsbook side by side with the best price highlighted.</p></div>
+      <div class="result"><h3>What changed</h3><p>Hand entry is the exception now. The site fills itself in, and the admin shows only what still needs a person.</p></div>
+    </div>
+    <div class="gal"><figure class="s8"><button type="button" aria-label="Enlarge: Odds page comparing sportsbooks side by side"><img src="img/cases/rt-odds.webp" alt="Odds page comparing sportsbooks side by side" loading="lazy"></button><figcaption>Odds comparison</figcaption></figure><figure class="s4"><button type="button" aria-label="Enlarge: The game card on a phone"><img src="img/cases/rt-card-m.webp" alt="The game card on a phone" loading="lazy"></button><figcaption>Phone · game card</figcaption></figure></div>
+  </section>
+</div>
+</main>
+<nav class="next" aria-label="Next project"><div class="wrap">
+  <a class="go" href="case-bb.html"><div class="label">Next</div><h2>BB →</h2></a>
+  <a class="btn" href="index.html#ai">All AI builds</a>
+</div></nav>
+<dialog id="lb" aria-label="Enlarged image"><button type="button" id="lbClose">Close ✕</button><img id="lbImg" alt=""><p id="lbCap"></p></dialog>
+<script>
+var lb=document.getElementById('lb'),li=document.getElementById('lbImg'),lc=document.getElementById('lbCap');
+document.querySelectorAll('.gal button').forEach(function(b){b.addEventListener('click',function(){
+  var i=b.querySelector('img');li.src=i.src;li.alt=i.alt;lc.textContent=i.alt;
+  if(lb.showModal)lb.showModal();else window.open(i.src,'_blank','noopener');});});
+document.getElementById('lbClose').addEventListener('click',function(){lb.close();});
+lb.addEventListener('click',function(e){if(e.target===lb)lb.close();});
+</script>
+</body>
+</html>

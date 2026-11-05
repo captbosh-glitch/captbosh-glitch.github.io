@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dino Tracker · Pat David</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="css/case.css">
+<script>
+(function(){var r=document.documentElement,k='pd-theme';
+try{var t=localStorage.getItem(k);if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}
+function dark(){var t=r.getAttribute('data-theme');return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;}
+function sync(){var b=document.getElementById('themeBtn');if(b)b.setAttribute('aria-label',dark()?'Switch to light mode':'Switch to dark mode');}
+document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest('#themeBtn'))return;
+  var t=dark()?'light':'dark';r.setAttribute('data-theme',t);try{localStorage.setItem(k,t);}catch(e){}sync();});
+document.addEventListener('DOMContentLoaded',sync);sync();})();
+</script>
+</head>
+<body>
+<header><div class="wrap"><a class="mark" href="index.html">Pat David</a><a class="back" href="index.html#dino">← All work</a><button class="theme" id="themeBtn" type="button" aria-label="Switch theme"><svg class="moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div></header>
+<main>
+<div class="top"><div class="wrap head">
+  <div><div class="label">Building with AI · Field guide to deep time · Oct 2026</div><h1>Dino Tracker</h1><p>Pick any place on Earth and meet the prehistoric life whose fossils were found around it, from live Paleobiology Database records. It combined everything the earlier builds taught me, and kept growing after launch.</p><div class="links"><a class="btn" href="https://captbosh-glitch.github.io/dino-tracker/" target="_blank" rel="noopener">Open the app ↗</a><a class="btn ghost" href="https://captbosh-glitch.github.io/dino-tracker/case-study/" target="_blank" rel="noopener">Full case study ↗</a></div></div>
+  <dl class="spec"><dt>Role</dt><dd>Concept, UX, visual design, illustration direction</dd><dt>Built with</dt><dd>Claude, for critique and engineering</dd><dt>Data</dt><dd>Paleobiology Database, PhyloPic, OpenStreetMap</dd><dt>Status</dt><dd>Live web app, works offline</dd></dl>
+</div><div class="wrap"><figure class="hero-shot"><img src="img/cases/dt-home.webp" alt="Dino Tracker home: Who walked here before you?, with a place search beside a painted Jurassic river valley"></figure></div></div>
+<div class="wrap">
+  <nav class="toc" aria-label="Projects in this case"><a href="#concept">01 · From sketch to a real app</a><a href="#paintings">02 · 601 paintings in one house style</a><a href="#after-launch">03 · Six ideas after it shipped</a></nav>
+  <section class="part" id="concept">
+    <div class="part-head"><div><span class="n">01</span><h2>From sketch to a real app</h2></div><p>Figma first, then a critique against real fossil data</p></div>
+    <div class="story">
+      <div><h3>The problem</h3><p>Kids and parents ask &ldquo;what dinosaurs lived here?&rdquo; and the answer is buried in research databases built for paleontologists.</p></div>
+      <div><h3>What I did</h3><p>I designed three screens in Figma with a museum look and a color for each period. Claude critiqued them against real fossil records, built a clickable prototype, then a web app with live records for any place, GPS, shareable links and offline support.</p></div>
+      <div class="result"><h3>What changed</h3><p>A field guide for any town: the animals found nearby, grouped by era, each with a field-guide page.</p></div>
+    </div>
+    <div class="gal"><figure class="s4"><button type="button" aria-label="Enlarge: Figma mockup of the location screen with a ZIP code field"><img src="img/cases/dt-mloc.webp" alt="Figma mockup of the location screen with a ZIP code field" loading="lazy"></button><figcaption>Mockup · location</figcaption></figure><figure class="s4"><button type="button" aria-label="Enlarge: Figma mockup of regional results with a period slider"><img src="img/cases/dt-mres.webp" alt="Figma mockup of regional results with a period slider" loading="lazy"></button><figcaption>Mockup · results</figcaption></figure><figure class="s4"><button type="button" aria-label="Enlarge: Figma mockup of the Stegosaurus field guide page"><img src="img/cases/dt-mdet.webp" alt="Figma mockup of the Stegosaurus field guide page" loading="lazy"></button><figcaption>Mockup · field guide</figcaption></figure><figure class="s6"><button type="button" aria-label="Enlarge: Results near Golden, Colorado: Allosaurus, Camarasaurus and Diplodocus"><img src="img/cases/dt-res.webp" alt="Results near Golden, Colorado: Allosaurus, Camarasaurus and Diplodocus" loading="lazy"></button><figcaption>Results near Golden, Colorado</figcaption></figure><figure class="s6"><button type="button" aria-label="Enlarge: Stegosaurus field guide with a painting and stats"><img src="img/cases/dt-det.webp" alt="Stegosaurus field guide with a painting and stats" loading="lazy"></button><figcaption>Field guide · Stegosaurus</figcaption></figure></div>
+  </section>
+  <section class="part" id="paintings">
+    <div class="part-head"><div><span class="n">02</span><h2>601 paintings in one house style</h2></div><p>Art-directed in batches, in the order people will see them</p></div>
+    <div class="story">
+      <div><h3>The problem</h3><p>Silhouettes were a good stand-in, but they didn&rsquo;t feel like a field guide. The database lists about 3,900 dinosaur names, so the question was which ones to paint first.</p></div>
+      <div><h3>What I did</h3><p>I art-directed the paintings in ink and watercolor, in sheets of up to 100. Instead of ranking by how common an animal is worldwide, we ranked by where people actually look: every animal at the sample places first, then the ones found across several regions.</p></div>
+      <div class="result"><h3>What changed</h3><p>601 paintings in a single style. Places like Drumheller, Alberta have a painting for every dinosaur on the page.</p></div>
+    </div>
+    <div class="gal"><figure class="s12"><button type="button" aria-label="Enlarge: A row of paintings from the specimen collection"><img src="img/cases/dt-coll.webp" alt="A row of paintings from the specimen collection" loading="lazy"></button><figcaption>A few from the collection</figcaption></figure><figure class="s6"><button type="button" aria-label="Enlarge: Results in the Gobi Desert led by Protoceratops and Velociraptor"><img src="img/cases/dt-gobi.webp" alt="Results in the Gobi Desert led by Protoceratops and Velociraptor" loading="lazy"></button><figcaption>Gobi Desert, Mongolia</figcaption></figure><figure class="s6"><button type="button" aria-label="Enlarge: Sea monsters near Lyme Regis, England"><img src="img/cases/dt-lyme.webp" alt="Sea monsters near Lyme Regis, England" loading="lazy"></button><figcaption>Lyme Regis, England</figcaption></figure></div>
+  </section>
+  <section class="part" id="after-launch">
+    <div class="part-head"><div><span class="n">03</span><h2>Six ideas after it shipped</h2></div><p>I kept using it, and so did my son</p></div>
+    <div class="story">
+      <div><h3>The problem</h3><p>The app answered &ldquo;who lived here?&rdquo; but not &ldquo;where did Spinosaurus live?&rdquo;, and some favorite animals weren&rsquo;t dinosaurs at all.</p></div>
+      <div><h3>What I did</h3><p>Six features followed launch: animal search on a world map, a five-span timeline from the Paleozoic to the Cenozoic, the paintings, a news tab of new fossil finds, 30 more non-dinosaurs chosen with my son, and search from any page.</p></div>
+      <div class="result"><h3>What changed</h3><p>Search works both ways now, by place or by animal, and it&rsquo;s designed for phones first.</p></div>
+    </div>
+    <div class="gal"><figure class="s8"><button type="button" aria-label="Enlarge: Map of every Spinosaurus find across North Africa"><img src="img/cases/dt-find.webp" alt="Map of every Spinosaurus find across North Africa" loading="lazy"></button><figcaption>Where Spinosaurus lived</figcaption></figure><figure class="s4"><button type="button" aria-label="Enlarge: Home screen on a phone"><img src="img/cases/dt-p-home.webp" alt="Home screen on a phone" loading="lazy"></button><figcaption>Phone · home</figcaption></figure><figure class="s6"><button type="button" aria-label="Enlarge: World map of fossil finds"><img src="img/cases/dt-map.webp" alt="World map of fossil finds" loading="lazy"></button><figcaption>Pick any spot on Earth</figcaption></figure><figure class="s3"><button type="button" aria-label="Enlarge: Period filter on a phone"><img src="img/cases/dt-p-res.webp" alt="Period filter on a phone" loading="lazy"></button><figcaption>Phone · periods</figcaption></figure><figure class="s3"><button type="button" aria-label="Enlarge: Tyrannosaurus field guide on a phone"><img src="img/cases/dt-p-det.webp" alt="Tyrannosaurus field guide on a phone" loading="lazy"></button><figcaption>Phone · field guide</figcaption></figure></div>
+  </section>
+</div>
+</main>
+<nav class="next" aria-label="Next project"><div class="wrap">
+  <a class="go" href="case-backyard.html"><div class="label">Next</div><h2>Backyard &amp; Trail →</h2></a>
+  <a class="btn" href="index.html#ai">All AI builds</a>
+</div></nav>
+<dialog id="lb" aria-label="Enlarged image"><button type="button" id="lbClose">Close ✕</button><img id="lbImg" alt=""><p id="lbCap"></p></dialog>
+<script>
+var lb=document.getElementById('lb'),li=document.getElementById('lbImg'),lc=document.getElementById('lbCap');
+document.querySelectorAll('.gal button').forEach(function(b){b.addEventListener('click',function(){
+  var i=b.querySelector('img');li.src=i.src;li.alt=i.alt;lc.textContent=i.alt;
+  if(lb.showModal)lb.showModal();else window.open(i.src,'_blank','noopener');});});
+document.getElementById('lbClose').addEventListener('click',function(){lb.close();});
+lb.addEventListener('click',function(e){if(e.target===lb)lb.close();});
+</script>
+</body>
+</html>

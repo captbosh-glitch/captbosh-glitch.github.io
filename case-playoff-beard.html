@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Playoff Beard · Pat David</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="css/case.css">
+<script>
+(function(){var r=document.documentElement,k='pd-theme';
+try{var t=localStorage.getItem(k);if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}
+function dark(){var t=r.getAttribute('data-theme');return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;}
+function sync(){var b=document.getElementById('themeBtn');if(b)b.setAttribute('aria-label',dark()?'Switch to light mode':'Switch to dark mode');}
+document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest('#themeBtn'))return;
+  var t=dark()?'light':'dark';r.setAttribute('data-theme',t);try{localStorage.setItem(k,t);}catch(e){}sync();});
+document.addEventListener('DOMContentLoaded',sync);sync();})();
+</script>
+</head>
+<body>
+<header><div class="wrap"><a class="mark" href="index.html">Pat David</a><a class="back" href="index.html#playoff-beard">← All work</a><button class="theme" id="themeBtn" type="button" aria-label="Switch theme"><svg class="moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div></header>
+<main>
+<div class="top"><div class="wrap head">
+  <div><div class="label">Building with AI · News agent · Oct 2026</div><h1>Playoff Beard</h1><p>A sports news site that runs itself. Every hour it collects headlines, removes duplicates, tags each story by team and publishes a page for every league and team.</p><div class="links"><a class="btn" href="https://www.playoffbeard.com" target="_blank" rel="noopener">Open the site ↗</a></div></div>
+  <dl class="spec"><dt>Role</dt><dd>Product and design</dd><dt>Built with</dt><dd>Claude Code</dd><dt>Coverage</dt><dd>NHL, NFL, NBA, MLB, UFC, soccer</dd><dt>Scale</dt><dd>185 pages, rebuilt every hour</dd></dl>
+</div><div class="wrap"><figure class="hero-shot"><img src="img/cases/beard-home.webp" alt="Playoff Beard home page with league tabs and top soccer stories"></figure></div></div>
+<div class="wrap">
+  
+  <section class="part" id="agent">
+    <div class="part-head"><div><span class="n">01</span><h2>A pipeline turned news collector</h2></div><p>The Run to Your Bets pipeline, pointed at headlines</p></div>
+    <div class="story">
+      <div><h3>The problem</h3><p>Following one team means checking a dozen outlets, and the same story shows up over and over.</p></div>
+      <div><h3>What I did</h3><p>I reused the automated data pipeline from Run to Your Bets and pointed it at news. It gathers headlines from many outlets, groups repeat stories into one, tags each story by league and team, and publishes static pages on a schedule.</p></div>
+      <div class="result"><h3>What changed</h3><p>Six leagues and 185 pages that update every hour, with no one at the keyboard.</p></div>
+    </div>
+    <div class="gal"><figure class="s6"><button type="button" aria-label="Enlarge: NHL news page with team badges and today&rsquo;s stories"><img src="img/cases/beard-league.webp" alt="NHL news page with team badges and today&rsquo;s stories" loading="lazy"></button><figcaption>League page · NHL</figcaption></figure><figure class="s6"><button type="button" aria-label="Enlarge: Boston Bruins team page with the latest news"><img src="img/cases/beard-team.webp" alt="Boston Bruins team page with the latest news" loading="lazy"></button><figcaption>Team page · Bruins</figcaption></figure></div>
+  </section>
+</div>
+</main>
+<nav class="next" aria-label="Next project"><div class="wrap">
+  <a class="go" href="case-rtyb.html"><div class="label">Next</div><h2>Run to Your Bets →</h2></a>
+  <a class="btn" href="index.html#ai">All AI builds</a>
+</div></nav>
+<dialog id="lb" aria-label="Enlarged image"><button type="button" id="lbClose">Close ✕</button><img id="lbImg" alt=""><p id="lbCap"></p></dialog>
+<script>
+var lb=document.getElementById('lb'),li=document.getElementById('lbImg'),lc=document.getElementById('lbCap');
+document.querySelectorAll('.gal button').forEach(function(b){b.addEventListener('click',function(){
+  var i=b.querySelector('img');li.src=i.src;li.alt=i.alt;lc.textContent=i.alt;
+  if(lb.showModal)lb.showModal();else window.open(i.src,'_blank','noopener');});});
+document.getElementById('lbClose').addEventListener('click',function(){lb.close();});
+lb.addEventListener('click',function(e){if(e.target===lb)lb.close();});
+</script>
+</body>
+</html>

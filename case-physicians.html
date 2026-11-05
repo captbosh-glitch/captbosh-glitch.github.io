@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Physician’s Dashboard · Pat David</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="css/case.css">
+<script>
+(function(){var r=document.documentElement,k='pd-theme';
+try{var t=localStorage.getItem(k);if(t==='light'||t==='dark')r.setAttribute('data-theme',t);}catch(e){}
+function dark(){var t=r.getAttribute('data-theme');return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;}
+function sync(){var b=document.getElementById('themeBtn');if(b)b.setAttribute('aria-label',dark()?'Switch to light mode':'Switch to dark mode');}
+document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest('#themeBtn'))return;
+  var t=dark()?'light':'dark';r.setAttribute('data-theme',t);try{localStorage.setItem(k,t);}catch(e){}sync();});
+document.addEventListener('DOMContentLoaded',sync);sync();})();
+</script>
+</head>
+<body>
+<header><div class="wrap"><a class="mark" href="index.html">Pat David</a><a class="back" href="index.html#physicians">← All work</a><button class="theme" id="themeBtn" type="button" aria-label="Switch theme"><svg class="moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div></header>
+<main>
+<div class="top"><div class="wrap head">
+  <div><div class="label">Healthcare network · Sole UX Designer</div><h1>Physician&rsquo;s Dashboard</h1><p>A shared dashboard to help physicians, hospitals and clinics in one network coordinate patient care.</p></div>
+  <dl class="spec"><dt>Role</dt><dd>Sole UX Designer</dd><dt>Partners</dt><dd>Product team; an advisory council of medical professionals</dd><dt>Tools</dt><dd>Figma</dd><dt>Users</dt><dd>Physicians, hospitals, clinics</dd></dl>
+</div></div>
+<div class="wrap">
+  
+  <section class="part" id="dashboard">
+    <div class="part-head"><div><span class="n">01</span><h2>A network view of patient care</h2></div><p>Lists, live analytics and partner links, arranged around each provider</p></div>
+    <div class="story">
+      <div><h3>The problem</h3><p>Physicians, hospitals and clinics in the same network had no shared view of patient care, which left gaps in coordination.</p></div>
+      <div><h3>What I did</h3><p>I worked with the product team and an advisory council of medical professionals. The design lets each provider build custom lists, see real-time analytics and link to partner networks based on how they work. I iterated in Figma through several rounds of feedback before handing off to engineering.</p></div>
+      <div class="result"><h3>What changed</h3><p>A dashboard the council shaped with me, ready for engineering, that fits real clinical workflows.</p></div>
+    </div>
+    <div class="gal"><figure class="s12"><button type="button" aria-label="Enlarge: Dashboard overview on a desktop monitor"><img src="img/cases/pd-01.webp" alt="Dashboard overview on a desktop monitor" loading="lazy"></button><figcaption>Overview</figcaption></figure><figure class="s4"><button type="button" aria-label="Enlarge: Dashboard with patient lists and a regional map"><img src="img/cases/pd-02.webp" alt="Dashboard with patient lists and a regional map" loading="lazy"></button><figcaption>Lists and map</figcaption></figure><figure class="s4"><button type="button" aria-label="Enlarge: Analytics overlay with line, scatter and bar charts"><img src="img/cases/pd-03.webp" alt="Analytics overlay with line, scatter and bar charts" loading="lazy"></button><figcaption>Analytics snapshot</figcaption></figure><figure class="s4"><button type="button" aria-label="Enlarge: Facility detail with charts and a heat table"><img src="img/cases/pd-04.webp" alt="Facility detail with charts and a heat table" loading="lazy"></button><figcaption>Facility detail</figcaption></figure></div>
+  </section>
+</div>
+</main>
+<nav class="next" aria-label="Next project"><div class="wrap">
+  <a class="go" href="case-afrikan.html"><div class="label">Next</div><h2>Footwear that celebrates Africa →</h2></a>
+  <a class="btn" href="index.html#work">All case studies</a>
+</div></nav>
+<dialog id="lb" aria-label="Enlarged image"><button type="button" id="lbClose">Close ✕</button><img id="lbImg" alt=""><p id="lbCap"></p></dialog>
+<script>
+var lb=document.getElementById('lb'),li=document.getElementById('lbImg'),lc=document.getElementById('lbCap');
+document.querySelectorAll('.gal button').forEach(function(b){b.addEventListener('click',function(){
+  var i=b.querySelector('img');li.src=i.src;li.alt=i.alt;lc.textContent=i.alt;
+  if(lb.showModal)lb.showModal();else window.open(i.src,'_blank','noopener');});});
+document.getElementById('lbClose').addEventListener('click',function(){lb.close();});
+lb.addEventListener('click',function(e){if(e.target===lb)lb.close();});
+</script>
+</body>
+</html>
